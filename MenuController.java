@@ -20,6 +20,7 @@ public class MenuController implements ActionListener
     {
         this.view = view;
         view.getPotoddsB().addActionListener(this);
+        view.getTourneyTimerB().addActionListener(this);
     }
 
     /**
@@ -31,6 +32,10 @@ public class MenuController implements ActionListener
         if(e.getSource().equals(view.getPotoddsB()))
         {
             PotOddsController potodds = new PotOddsController(new PotOddsView(), new PotOddsModel());
+        }
+        if(e.getSource().equals(view.getTourneyTimerB()))
+        {
+            TourneyTimerController timer = new TourneyTimerController(new TourneyTimerView(), new TourneyTimerModel());
         }
     }
 
